@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="birthday_wishes" model="mail.template">
+            <field name="name">Birthday Wishes</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="subject">Happy Birthday!</field>
+            <field name="body_html" type="html">
+<div>Have a <strong>happy birthday</strong> <t t-out="object.name"/>! 🎂
+
+Best wishes for the coming year from <t t-out="object.company_id.name"/>! </div>
+            </field>
+        </record>
+    </data>
+</odoo>
